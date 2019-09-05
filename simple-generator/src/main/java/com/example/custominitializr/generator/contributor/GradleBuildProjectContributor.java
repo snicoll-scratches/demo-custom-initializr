@@ -9,14 +9,14 @@ import io.spring.initializr.generator.buildsystem.gradle.GradleBuildWriter;
 import io.spring.initializr.generator.buildsystem.gradle.GroovyDslGradleBuildWriter;
 import io.spring.initializr.generator.io.IndentingWriter;
 import io.spring.initializr.generator.io.SimpleIndentStrategy;
-import io.spring.initializr.generator.project.ResolvedProjectDescription;
+import io.spring.initializr.generator.project.ProjectDescription;
 import io.spring.initializr.generator.project.contributor.ProjectContributor;
 
 public class GradleBuildProjectContributor implements ProjectContributor {
 
-	private final ResolvedProjectDescription projectDescription;
+	private final ProjectDescription projectDescription;
 
-	public GradleBuildProjectContributor(ResolvedProjectDescription projectDescription) {
+	public GradleBuildProjectContributor(ProjectDescription projectDescription) {
 		this.projectDescription = projectDescription;
 	}
 
@@ -32,10 +32,9 @@ public class GradleBuildProjectContributor implements ProjectContributor {
 
 	private GradleBuild createMavenBuild() {
 		GradleBuild build = new GradleBuild();
-		build.setGroup(this.projectDescription.getGroupId());
-		build.setArtifact(this.projectDescription.getArtifactId());
-		build.setVersion(this.projectDescription.getVersion());
-		build.setSourceCompatibility(this.projectDescription.getLanguage().jvmVersion());
+		build.settings().group(this.projectDescription.getGroupId()).artifact(this.projectDescription.getArtifactId())
+				.version(this.projectDescription.getVersion())
+				.sourceCompatibility(this.projectDescription.getLanguage().jvmVersion());
 		build.plugins().add("java");
 		this.projectDescription.getRequestedDependencies()
 				.forEach((id, dependency) -> build.dependencies().add(id, dependency));

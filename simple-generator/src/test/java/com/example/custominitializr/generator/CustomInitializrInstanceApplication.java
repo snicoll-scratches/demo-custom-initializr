@@ -7,7 +7,7 @@ import io.spring.initializr.generator.buildsystem.Dependency;
 import io.spring.initializr.generator.buildsystem.maven.MavenBuildSystem;
 import io.spring.initializr.generator.language.Language;
 import io.spring.initializr.generator.language.java.JavaLanguage;
-import io.spring.initializr.generator.project.ProjectDescription;
+import io.spring.initializr.generator.project.MutableProjectDescription;
 import io.spring.initializr.generator.version.Version;
 import io.spring.initializr.generator.version.VersionReference;
 
@@ -16,7 +16,7 @@ public class CustomInitializrInstanceApplication {
 	public static void main(String[] args) {
 		SimpleGenerator generator = new SimpleGenerator();
 
-		ProjectDescription description = new ProjectDescription();
+		MutableProjectDescription description = new MutableProjectDescription();
 		description.setGroupId("com.example");
 		description.setArtifactId("demo");
 		description.setVersion("1.0.0.BUILD-SNAPSHOT");

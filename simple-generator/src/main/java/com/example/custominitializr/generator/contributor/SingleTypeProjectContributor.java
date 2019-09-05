@@ -23,19 +23,19 @@ import java.nio.file.Path;
 import java.util.Collections;
 
 import io.spring.initializr.generator.io.template.MustacheTemplateRenderer;
-import io.spring.initializr.generator.project.ResolvedProjectDescription;
+import io.spring.initializr.generator.project.ProjectDescription;
 import io.spring.initializr.generator.project.contributor.ProjectContributor;
 
 public class SingleTypeProjectContributor implements ProjectContributor {
 
 	private final MustacheTemplateRenderer templateRenderer;
 
-	private final ResolvedProjectDescription projectDescription;
+	private final ProjectDescription projectDescription;
 
 	private final String templateName;
 
 	public SingleTypeProjectContributor(MustacheTemplateRenderer templateRenderer,
-			ResolvedProjectDescription projectDescription, String templateName) {
+			ProjectDescription projectDescription, String templateName) {
 		this.templateRenderer = templateRenderer;
 		this.projectDescription = projectDescription;
 		this.templateName = templateName;
@@ -44,7 +44,7 @@ public class SingleTypeProjectContributor implements ProjectContributor {
 	@Override
 	public void contribute(Path projectRoot) throws IOException {
 		Path file = this.projectDescription.getBuildSystem()
-				.getMainDirectory(projectRoot, this.projectDescription.getLanguage())
+				.getMainSource(projectRoot, this.projectDescription.getLanguage())
 				.resolveSourceFile(this.projectDescription.getPackageName(), this.templateName);
 		try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))) {
 			writer.println(this.templateRenderer.render(this.templateName,

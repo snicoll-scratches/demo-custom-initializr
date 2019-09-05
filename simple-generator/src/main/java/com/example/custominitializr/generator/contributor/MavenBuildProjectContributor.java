@@ -8,14 +8,14 @@ import io.spring.initializr.generator.buildsystem.maven.MavenBuild;
 import io.spring.initializr.generator.buildsystem.maven.MavenBuildWriter;
 import io.spring.initializr.generator.io.IndentingWriter;
 import io.spring.initializr.generator.io.SimpleIndentStrategy;
-import io.spring.initializr.generator.project.ResolvedProjectDescription;
+import io.spring.initializr.generator.project.ProjectDescription;
 import io.spring.initializr.generator.project.contributor.ProjectContributor;
 
 public class MavenBuildProjectContributor implements ProjectContributor {
 
-	private final ResolvedProjectDescription projectDescription;
+	private final ProjectDescription projectDescription;
 
-	public MavenBuildProjectContributor(ResolvedProjectDescription projectDescription) {
+	public MavenBuildProjectContributor(ProjectDescription projectDescription) {
 		this.projectDescription = projectDescription;
 	}
 
@@ -31,12 +31,10 @@ public class MavenBuildProjectContributor implements ProjectContributor {
 
 	private MavenBuild createMavenBuild() {
 		MavenBuild build = new MavenBuild();
-		build.setGroup(this.projectDescription.getGroupId());
-		build.setArtifact(this.projectDescription.getArtifactId());
-		build.setVersion(this.projectDescription.getVersion());
-		build.setName(this.projectDescription.getName());
-		build.setDescription(this.projectDescription.getDescription());
-		build.setProperty("java.version", this.projectDescription.getLanguage().jvmVersion());
+		build.settings().group(this.projectDescription.getGroupId()).artifact(this.projectDescription.getArtifactId())
+				.version(this.projectDescription.getVersion()).name(this.projectDescription.getName())
+				.description(this.projectDescription.getDescription());
+		build.properties().property("java.version", this.projectDescription.getLanguage().jvmVersion());
 		this.projectDescription.getRequestedDependencies()
 				.forEach((id, dependency) -> build.dependencies().add(id, dependency));
 		return build;

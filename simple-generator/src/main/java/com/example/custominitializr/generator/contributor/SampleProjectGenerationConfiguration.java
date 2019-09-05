@@ -18,8 +18,8 @@ package com.example.custominitializr.generator.contributor;
 
 import io.spring.initializr.generator.buildsystem.Build;
 import io.spring.initializr.generator.io.template.MustacheTemplateRenderer;
+import io.spring.initializr.generator.project.ProjectDescription;
 import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
-import io.spring.initializr.generator.project.ResolvedProjectDescription;
 import io.spring.initializr.generator.spring.build.BuildCustomizer;
 
 import org.springframework.context.annotation.Bean;
@@ -32,12 +32,12 @@ public class SampleProjectGenerationConfiguration {
 
 	@Bean
 	public BuildCustomizer<Build> sampleBuildCustomizer() {
-		return (build) -> build.addInternalVersionProperty("test.information", "Hello");
+		return (build) -> build.properties().version("test.information", "Hello");
 	}
 
 	@Bean
 	public SingleTypeProjectContributor singleTypeProjectContributor(MustacheTemplateRenderer templateRenderer,
-			ResolvedProjectDescription description) {
+			ProjectDescription description) {
 		return new SingleTypeProjectContributor(templateRenderer, description, "Test.java");
 	}
 

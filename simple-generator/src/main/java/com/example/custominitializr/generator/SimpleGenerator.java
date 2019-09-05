@@ -26,7 +26,7 @@ import io.spring.initializr.generator.io.IndentingWriterFactory;
 import io.spring.initializr.generator.io.template.MustacheTemplateRenderer;
 import io.spring.initializr.generator.project.DefaultProjectAssetGenerator;
 import io.spring.initializr.generator.project.ProjectAssetGenerator;
-import io.spring.initializr.generator.project.ProjectDescription;
+import io.spring.initializr.generator.project.MutableProjectDescription;
 import io.spring.initializr.generator.project.ProjectGenerator;
 import io.spring.initializr.metadata.InitializrMetadata;
 import io.spring.initializr.metadata.InitializrMetadataBuilder;
@@ -37,7 +37,7 @@ class SimpleGenerator {
 
 	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HHmmss");
 
-	Path generateProject(ProjectDescription description) {
+	Path generateProject(MutableProjectDescription description) {
 		ProjectGenerator projectGenerator = new ProjectGenerator((context) -> {
 			context.registerBean(SampleContributor.class, SampleContributor::new);
 			context.registerBean(InitializrMetadata.class, () -> InitializrMetadataBuilder.create()
