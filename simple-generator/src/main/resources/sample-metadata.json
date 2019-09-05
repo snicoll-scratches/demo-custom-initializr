@@ -20,15 +20,15 @@
           "versionProperty": "azure.version",
           "mappings": [
             {
-              "versionRange": "[1.5.4.RELEASE,2.0.0.RELEASE)",
+              "compatibilityRange": "[1.5.4.RELEASE,2.0.0.RELEASE)",
               "version": "0.2.4"
             },
             {
-              "versionRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
+              "compatibilityRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
               "version": "2.0.10"
             },
             {
-              "versionRange": "2.1.0.RELEASE",
+              "compatibilityRange": "2.1.0.RELEASE",
               "version": "2.1.6"
             }
           ]
@@ -39,15 +39,15 @@
           "versionProperty": "spring-boot-admin.version",
           "mappings": [
             {
-              "versionRange": "[1.5.9.RELEASE,2.0.0.M1)",
+              "compatibilityRange": "[1.5.9.RELEASE,2.0.0.M1)",
               "version": "1.5.7"
             },
             {
-              "versionRange": "[2.0.0.M1,2.1.0.M1)",
+              "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
               "version": "2.0.6"
             },
             {
-              "versionRange": "[2.1.0.M1,2.2.0.M1)",
+              "compatibilityRange": "[2.1.0.M1,2.2.0.M1)",
               "version": "2.1.5"
             }
           ]
@@ -59,11 +59,11 @@
           "order": 50,
           "mappings": [
             {
-              "versionRange": "[1.5.0.RELEASE,1.5.x.RELEASE]",
+              "compatibilityRange": "[1.5.0.RELEASE,1.5.x.RELEASE]",
               "version": "Edgware.SR6"
             },
             {
-              "versionRange": "[1.5.x.BUILD-SNAPSHOT,2.0.0.M1)",
+              "compatibilityRange": "[1.5.x.BUILD-SNAPSHOT,2.0.0.M1)",
               "version": "Edgware.BUILD-SNAPSHOT",
               "repositories": [
                 "spring-snapshots",
@@ -71,74 +71,74 @@
               ]
             },
             {
-              "versionRange": "[2.0.0.M3, 2.0.0.M5)",
+              "compatibilityRange": "[2.0.0.M3, 2.0.0.M5)",
               "version": "Finchley.M2",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.M5, 2.0.0.M5]",
+              "compatibilityRange": "[2.0.0.M5, 2.0.0.M5]",
               "version": "Finchley.M3",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.M6, 2.0.0.M6]",
+              "compatibilityRange": "[2.0.0.M6, 2.0.0.M6]",
               "version": "Finchley.M4",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.M7, 2.0.0.M7]",
+              "compatibilityRange": "[2.0.0.M7, 2.0.0.M7]",
               "version": "Finchley.M5",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.RC1, 2.0.0.RC1]",
+              "compatibilityRange": "[2.0.0.RC1, 2.0.0.RC1]",
               "version": "Finchley.M6",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.RC2,2.0.0.RC2]",
+              "compatibilityRange": "[2.0.0.RC2,2.0.0.RC2]",
               "version": "Finchley.M7",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.RELEASE,2.0.0.RELEASE]",
+              "compatibilityRange": "[2.0.0.RELEASE,2.0.0.RELEASE]",
               "version": "Finchley.M9",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.1.RELEASE,2.0.2.RELEASE)",
+              "compatibilityRange": "[2.0.1.RELEASE,2.0.2.RELEASE)",
               "version": "Finchley.RC1",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.2.RELEASE,2.0.3.RELEASE)",
+              "compatibilityRange": "[2.0.2.RELEASE,2.0.3.RELEASE)",
               "version": "Finchley.RC2",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.3.RELEASE,2.0.x.BUILD-SNAPSHOT)",
+              "compatibilityRange": "[2.0.3.RELEASE,2.0.x.BUILD-SNAPSHOT)",
               "version": "Finchley.SR4"
             },
             {
-              "versionRange": "[2.0.x.BUILD-SNAPSHOT,2.1.0.M3)",
+              "compatibilityRange": "[2.0.x.BUILD-SNAPSHOT,2.1.0.M3)",
               "version": "Finchley.BUILD-SNAPSHOT",
               "repositories": [
                 "spring-snapshots",
@@ -146,18 +146,18 @@
               ]
             },
             {
-              "versionRange": "[2.1.0.M3,2.1.0.RELEASE)",
+              "compatibilityRange": "[2.1.0.M3,2.1.0.RELEASE)",
               "version": "Greenwich.M1",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.1.0.RELEASE,2.1.x.BUILD-SNAPSHOT)",
+              "compatibilityRange": "[2.1.0.RELEASE,2.1.x.BUILD-SNAPSHOT)",
               "version": "Greenwich.SR2"
             },
             {
-              "versionRange": "[2.1.x.BUILD-SNAPSHOT,2.2.0.M4)",
+              "compatibilityRange": "[2.1.x.BUILD-SNAPSHOT,2.2.0.M4)",
               "version": "Greenwich.BUILD-SNAPSHOT",
               "repositories": [
                 "spring-snapshots",
@@ -165,14 +165,14 @@
               ]
             },
             {
-              "versionRange": "[2.2.0.M4,2.2.0.M4]",
+              "compatibilityRange": "[2.2.0.M4,2.2.0.M4]",
               "version": "Hoxton.M1",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "2.2.0.BUILD-SNAPSHOT",
+              "compatibilityRange": "2.2.0.BUILD-SNAPSHOT",
               "version": "Hoxton.BUILD-SNAPSHOT",
               "repositories": [
                 "spring-snapshots",
@@ -190,15 +190,15 @@
           ],
           "mappings": [
             {
-              "versionRange": "[1.5.0.RELEASE,1.5.x.BUILD-SNAPSHOT]",
+              "compatibilityRange": "[1.5.0.RELEASE,1.5.x.BUILD-SNAPSHOT]",
               "version": "1.6.6.RELEASE"
             },
             {
-              "versionRange": "[2.0.0.RELEASE,2.0.x.BUILD-SNAPSHOT]",
+              "compatibilityRange": "[2.0.0.RELEASE,2.0.x.BUILD-SNAPSHOT]",
               "version": "2.0.3.RELEASE"
             },
             {
-              "versionRange": "2.1.0.RELEASE",
+              "compatibilityRange": "2.1.0.RELEASE",
               "version": "2.1.4.RELEASE"
             }
           ]
@@ -209,21 +209,21 @@
           "versionProperty": "spring-statemachine.version",
           "mappings": [
             {
-              "versionRange": "[2.0.0.RC1,2.0.0.RC1]",
+              "compatibilityRange": "[2.0.0.RC1,2.0.0.RC1]",
               "version": "2.0.0.M4",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "[2.0.0.RC2,2.0.0.RC2]",
+              "compatibilityRange": "[2.0.0.RC2,2.0.0.RC2]",
               "version": "2.0.0.M5",
               "repositories": [
                 "spring-milestones"
               ]
             },
             {
-              "versionRange": "2.0.0.RELEASE",
+              "compatibilityRange": "2.0.0.RELEASE",
               "version": "2.0.1.RELEASE"
             }
           ]
@@ -234,15 +234,15 @@
           "versionProperty": "vaadin.version",
           "mappings": [
             {
-              "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+              "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
               "version": "8.8.5"
             },
             {
-              "versionRange": "[2.0.0.M1,2.1.0.M1)",
+              "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
               "version": "10.0.16"
             },
             {
-              "versionRange": "2.1.0.M1",
+              "compatibilityRange": "2.1.0.M1",
               "version": "13.0.11"
             }
           ]
@@ -272,7 +272,7 @@
         "defaultVersion": null,
         "mappings": [
           {
-            "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
             "version": "1.2.51"
           }
         ]
@@ -303,7 +303,7 @@
             "artifactId": "spring-boot-devtools",
             "scope": "runtime",
             "description": "Provides fast application restarts, LiveReload, and configurations for enhanced development experience.",
-            "versionRange": "1.3.0.RELEASE",
+            "compatibilityRange": "1.3.0.RELEASE",
             "starter": false,
             "links": [
               {
@@ -329,7 +329,7 @@
             "artifactId": "spring-boot-configuration-processor",
             "scope": "annotationProcessor",
             "description": "Generate metadata for developers to offer contextual help and “code completion” when working with custom configuration keys (ex.application.properties/.yml files).",
-            "versionRange": "1.2.0.RELEASE",
+            "compatibilityRange": "1.2.0.RELEASE",
             "starter": false,
             "links": [
               {
@@ -390,7 +390,7 @@
             "artifactId": "spring-boot-starter-webflux",
             "scope": "compile",
             "description": "Build reactive web applications with Spring WebFlux and Netty.",
-            "versionRange": "2.0.0.M1",
+            "compatibilityRange": "2.0.0.M1",
             "weight": 90,
             "starter": true
           },
@@ -436,7 +436,7 @@
             "artifactId": "spring-session-core",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.M2]",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M2]",
                 "groupId": null,
                 "artifactId": "spring-session",
                 "version": null,
@@ -561,7 +561,7 @@
             "version": "3.2.5",
             "scope": "compile",
             "description": "RESTful Web Services with JAX-RS. Making it trivial to declare endpoints which are backed by Spring and inject clients into your application.",
-            "versionRange": "[1.5.0.RELEASE,2.1.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.1.0.M1)",
             "starter": true,
             "links": [
               {
@@ -578,7 +578,7 @@
             "version": "1.1.1",
             "scope": "compile",
             "description": "Ratpack is a set of Java libraries that facilitate fast, efficient, evolvable and well tested HTTP applications. Built on Netty the event-driven networking engine.",
-            "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
             "starter": false
           },
           {
@@ -588,7 +588,7 @@
             "artifactId": "spring-boot-starter-mobile",
             "scope": "compile",
             "description": "Framework that provides capabilities to detect the type of device making a request to your Spring web site and serve alternative views based on that device.",
-            "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
             "starter": true
           }
         ]
@@ -722,7 +722,7 @@
             "artifactId": "spring-boot-starter-oauth2-client",
             "scope": "compile",
             "description": "Spring Boot integration for Spring Security's OAuth2/OpenID Connect client features.",
-            "versionRange": "2.0.0.M5",
+            "compatibilityRange": "2.0.0.M5",
             "starter": true,
             "links": [
               {
@@ -739,7 +739,7 @@
             "artifactId": "spring-boot-starter-oauth2-resource-server",
             "scope": "compile",
             "description": "Spring Boot integration for Spring Security's OAuth2 resource server features.",
-            "versionRange": "2.1.0.M2",
+            "compatibilityRange": "2.1.0.M2",
             "starter": true,
             "links": [
               {
@@ -756,7 +756,7 @@
             "artifactId": "spring-boot-starter-data-ldap",
             "scope": "compile",
             "description": "Makes it easier to build Spring based applications that use the Lightweight Directory Access Protocol.",
-            "versionRange": "1.5.0.RELEASE",
+            "compatibilityRange": "1.5.0.RELEASE",
             "starter": true,
             "links": [
               {
@@ -774,7 +774,7 @@
             "version": "1.2.1",
             "scope": "compile",
             "description": "Okta specific configuration for Spring Security/Spring Boot OAuth2 features. Enable your Spring Boot application to work with Okta via OAuth 2.0/OIDC.",
-            "versionRange": "2.1.2.RELEASE",
+            "compatibilityRange": "2.1.2.RELEASE",
             "starter": true,
             "links": [
               {
@@ -889,21 +889,21 @@
             "artifactId": "mybatis-spring-boot-starter",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": "1.3.4",
                 "starter": null
               },
               {
-                "versionRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
+                "compatibilityRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": "2.0.1",
                 "starter": null
               },
               {
-                "versionRange": "2.1.0.RELEASE",
+                "compatibilityRange": "2.1.0.RELEASE",
                 "groupId": null,
                 "artifactId": null,
                 "version": "2.1.0",
@@ -1045,7 +1045,7 @@
             "artifactId": "spring-boot-starter-data-redis-reactive",
             "scope": "compile",
             "description": "Access Redis key-value data stores in a reactive fashion with Spring Data Redis.",
-            "versionRange": "2.0.0.M7",
+            "compatibilityRange": "2.0.0.M7",
             "starter": true,
             "links": [
               {
@@ -1089,7 +1089,7 @@
             "artifactId": "spring-boot-starter-data-mongodb-reactive",
             "scope": "compile",
             "description": "Provides asynchronous stream processing with non-blocking back pressure for MongoDB. Implements the Reactive Streams API.",
-            "versionRange": "2.0.0.M1",
+            "compatibilityRange": "2.0.0.M1",
             "weight": 50,
             "starter": true,
             "links": [
@@ -1165,7 +1165,7 @@
             "artifactId": "spring-boot-starter-data-cassandra-reactive",
             "scope": "compile",
             "description": "Access Cassandra NoSQL Database in a reactive fashion",
-            "versionRange": "2.0.0.M1",
+            "compatibilityRange": "2.0.0.M1",
             "starter": true,
             "links": [
               {
@@ -1198,7 +1198,7 @@
             "artifactId": "spring-boot-starter-data-couchbase-reactive",
             "scope": "compile",
             "description": "Access Couchbase NoSQL database in a reactive fashion with Spring Data Couchbase.",
-            "versionRange": "2.0.0.M7",
+            "compatibilityRange": "2.0.0.M7",
             "starter": true,
             "links": [
               {
@@ -1236,7 +1236,7 @@
             "artifactId": "spring-boot-starter-data-gemfire",
             "scope": "compile",
             "description": "Access GemFire distributed data store with Spring Data Gemfire.",
-            "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
             "starter": true,
             "links": [
               {
@@ -1310,7 +1310,7 @@
             "artifactId": "spring-kafka",
             "scope": "compile",
             "description": "Publish, subscribe, store, and process streams of records.",
-            "versionRange": "1.5.0.RELEASE",
+            "compatibilityRange": "1.5.0.RELEASE",
             "weight": 100,
             "starter": false,
             "keywords": [
@@ -1331,7 +1331,7 @@
             "artifactId": "kafka-streams",
             "scope": "compile",
             "description": "Building stream processing applications with Apache Kafka Streams.",
-            "versionRange": "2.0.0.RELEASE",
+            "compatibilityRange": "2.0.0.RELEASE",
             "weight": 90,
             "starter": false,
             "links": [
@@ -1422,7 +1422,7 @@
             "artifactId": "spring-boot-starter-rsocket",
             "scope": "compile",
             "description": "RSocket.io applications with Spring Messaging and Netty.",
-            "versionRange": "2.2.0.M2",
+            "compatibilityRange": "2.2.0.M2",
             "starter": true
           },
           {
@@ -1432,21 +1432,21 @@
             "artifactId": "camel-spring-boot-starter",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
                 "groupId": null,
                 "artifactId": null,
                 "version": "2.21.5",
                 "starter": null
               },
               {
-                "versionRange": "[2.0.0.M1,2.1.0.M1)",
+                "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
                 "groupId": null,
                 "artifactId": null,
                 "version": "2.22.4",
                 "starter": null
               },
               {
-                "versionRange": "2.1.0.M1",
+                "compatibilityRange": "2.1.0.M1",
                 "groupId": null,
                 "artifactId": null,
                 "version": "2.24.0",
@@ -1455,7 +1455,7 @@
             ],
             "scope": "compile",
             "description": "Apache Camel lets you create the Enterprise Integration Patterns to implement routing and mediation rules a Java based Domain Specific Language via Spring.",
-            "versionRange": "1.5.0.RELEASE",
+            "compatibilityRange": "1.5.0.RELEASE",
             "starter": true,
             "links": [
               {
@@ -1515,7 +1515,7 @@
             "artifactId": "spring-boot-starter-quartz",
             "scope": "compile",
             "description": "Schedule jobs using Quartz.",
-            "versionRange": "2.0.0.M2",
+            "compatibilityRange": "2.0.0.M2",
             "starter": true
           },
           {
@@ -1572,7 +1572,7 @@
             "artifactId": "spring-boot-actuator-docs",
             "scope": "compile",
             "description": "API documentation for the Actuator endpoints.",
-            "versionRange": "[1.5.0.RELEASE,2.0.0.M1)",
+            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
             "starter": false
           },
           {
@@ -1582,7 +1582,7 @@
             "artifactId": "spring-boot-admin-starter-client",
             "scope": "compile",
             "description": "Required for your application to register with a Spring Boot Admin Server instance.",
-            "versionRange": "[1.5.9.RELEASE,2.2.0.M1)",
+            "compatibilityRange": "[1.5.9.RELEASE,2.2.0.M1)",
             "bom": "codecentric-spring-boot-admin",
             "starter": true,
             "links": [
@@ -1599,7 +1599,7 @@
             "artifactId": "spring-boot-admin-starter-server",
             "scope": "compile",
             "description": "A community project to manage and monitor your Spring Boot applications. Provides a UI on top of the Spring Boot Actuator endpoints.",
-            "versionRange": "[1.5.9.RELEASE,2.2.0.M1)",
+            "compatibilityRange": "[1.5.9.RELEASE,2.2.0.M1)",
             "bom": "codecentric-spring-boot-admin",
             "starter": true,
             "links": [
@@ -1637,7 +1637,7 @@
             "artifactId": "spring-cloud-function-context",
             "scope": "compile",
             "description": "Promotes the implementation of business logic via functions and supports a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).",
-            "versionRange": "2.0.2.RELEASE",
+            "compatibilityRange": "2.0.2.RELEASE",
             "bom": "spring-cloud",
             "starter": false,
             "links": [
@@ -1659,7 +1659,7 @@
             "artifactId": "spring-cloud-starter-task",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": null,
@@ -1717,14 +1717,14 @@
             "artifactId": "spring-cloud-starter-open-service-broker",
             "mappings": [
               {
-                "versionRange": "[2.0.0.RELEASE,2.1.0.M1)",
+                "compatibilityRange": "[2.0.0.RELEASE,2.1.0.M1)",
                 "groupId": null,
                 "artifactId": "spring-cloud-starter-open-service-broker-webmvc",
                 "version": "2.1.2.RELEASE",
                 "starter": null
               },
               {
-                "versionRange": "2.1.0.M1",
+                "compatibilityRange": "2.1.0.M1",
                 "groupId": null,
                 "artifactId": null,
                 "version": "3.0.3.RELEASE",
@@ -1733,7 +1733,7 @@
             ],
             "scope": "compile",
             "description": "Framework for building Spring Boot apps that implement the Open Service Broker API, which can deliver services to applications running within cloud native platforms such as Cloud Foundry, Kubernetes and OpenShift.",
-            "versionRange": "2.0.0.RELEASE",
+            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -1755,7 +1755,7 @@
             "artifactId": "spring-cloud-starter-contract-verifier",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": null,
@@ -1824,7 +1824,7 @@
             "artifactId": "spring-cloud-starter-vault-config",
             "scope": "compile",
             "description": "Provides client-side support for externalized configuration in a distributed system. Using HashiCorp's Vault you have a central place to manage external secret properties for applications across all environments.",
-            "versionRange": "1.5.3.RELEASE",
+            "compatibilityRange": "1.5.3.RELEASE",
             "bom": "spring-cloud",
             "starter": true
           },
@@ -1845,7 +1845,7 @@
             "artifactId": "spring-cloud-starter-consul-config",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": null,
@@ -1907,7 +1907,7 @@
             "artifactId": "spring-cloud-cloudfoundry-discovery",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": null,
@@ -1958,7 +1958,7 @@
             "artifactId": "spring-cloud-starter-gateway",
             "scope": "compile",
             "description": "Provides a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as security, monitoring/metrics, and resiliency.",
-            "versionRange": "2.0.0.M5",
+            "compatibilityRange": "2.0.0.M5",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2045,7 +2045,7 @@
             "artifactId": "spring-cloud-starter-netflix-turbine-stream",
             "scope": "compile",
             "description": "Circuit breaker metric aggregation using spring-cloud-netflix with Turbine and Spring Cloud Stream (requires a binder, e.g. Apache Kafka or RabbitMQ)",
-            "versionRange": "1.3.0.RELEASE",
+            "compatibilityRange": "1.3.0.RELEASE",
             "bom": "spring-cloud",
             "weight": -1,
             "starter": true
@@ -2108,7 +2108,7 @@
             "artifactId": "spring-cloud-stream-reactive",
             "scope": "compile",
             "description": "Reactive messaging microservices with Spring Cloud Stream (requires a binder, e.g. Apache Kafka or RabbitMQ).",
-            "versionRange": "2.0.0.RC2",
+            "compatibilityRange": "2.0.0.RC2",
             "bom": "spring-cloud",
             "weight": 90,
             "starter": true
@@ -2125,7 +2125,7 @@
             "artifactId": "spring-cloud-services-starter-config-client",
             "mappings": [
               {
-                "versionRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
+                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
                 "version": null,
@@ -2222,7 +2222,7 @@
             "artifactId": "azure-spring-boot-starter",
             "scope": "compile",
             "description": "Auto-configuration for Azure Services (Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, and more).",
-            "versionRange": "1.5.4.RELEASE",
+            "compatibilityRange": "1.5.4.RELEASE",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2239,7 +2239,7 @@
             "artifactId": "azure-active-directory-spring-boot-starter",
             "scope": "compile",
             "description": "Spring Security integration with Azure Active Directory for authentication.",
-            "versionRange": "1.5.4.RELEASE",
+            "compatibilityRange": "1.5.4.RELEASE",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2261,7 +2261,7 @@
             "artifactId": "azure-keyvault-secrets-spring-boot-starter",
             "scope": "compile",
             "description": "Manage application secrets and keys.",
-            "versionRange": "1.5.4.RELEASE",
+            "compatibilityRange": "1.5.4.RELEASE",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2283,7 +2283,7 @@
             "artifactId": "azure-storage-spring-boot-starter",
             "scope": "compile",
             "description": "Azure Storage service integration.",
-            "versionRange": "1.5.4.RELEASE",
+            "compatibilityRange": "1.5.4.RELEASE",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2310,7 +2310,7 @@
             "artifactId": "spring-cloud-gcp-starter",
             "scope": "compile",
             "description": "Contains auto-configuration support for every Spring Cloud GCP integration. Most of the auto-configuration code is only enabled if other dependencies are added to the classpath.",
-            "versionRange": "2.0.0.RELEASE",
+            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2332,7 +2332,7 @@
             "artifactId": "spring-cloud-gcp-starter-pubsub",
             "scope": "compile",
             "description": "Adds the GCP Support entry and all the required dependencies so that the Google Cloud Pub/Sub integration work out of the box.",
-            "versionRange": "2.0.0.RELEASE",
+            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2354,7 +2354,7 @@
             "artifactId": "spring-cloud-gcp-starter-storage",
             "scope": "compile",
             "description": "Adds the GCP Support entry and all the required dependencies so that the Google Cloud Storage integration work out of the box.",
-            "versionRange": "2.0.0.RELEASE",
+            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
