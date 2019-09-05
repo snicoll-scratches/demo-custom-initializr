@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 import io.spring.initializr.generator.io.template.MustacheTemplateRenderer;
 import io.spring.initializr.generator.project.ProjectDescription;
@@ -32,24 +33,34 @@ public class SingleTypeProjectContributor implements ProjectContributor {
 
 	private final ProjectDescription projectDescription;
 
-	private final String templateName;
+	private final String className;
 
 	public SingleTypeProjectContributor(MustacheTemplateRenderer templateRenderer,
-			ProjectDescription projectDescription, String templateName) {
+			ProjectDescription projectDescription, String className) {
 		this.templateRenderer = templateRenderer;
 		this.projectDescription = projectDescription;
-		this.templateName = templateName;
+		this.className = className;
 	}
 
 	@Override
 	public void contribute(Path projectRoot) throws IOException {
 		Path file = this.projectDescription.getBuildSystem()
 				.getMainSource(projectRoot, this.projectDescription.getLanguage())
-				.resolveSourceFile(this.projectDescription.getPackageName(), this.templateName);
+				.createSourceFile(this.projectDescription.getPackageName(), this.className);
+		Map<String, Object> model = createTemplateModel();
 		try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))) {
-			writer.println(this.templateRenderer.render(this.templateName,
-					Collections.singletonMap("packageName", this.projectDescription.getPackageName())));
+			writer.println(this.templateRenderer.render(determineTemplateName(), model));
 		}
+	}
+
+	private String determineTemplateName() {
+		return this.className + "." + this.projectDescription.getLanguage().id();
+	}
+
+	private Map<String, Object> createTemplateModel() {
+		Map<String, Object> model = new HashMap<>();
+		model.put("packageName", this.projectDescription.getPackageName());
+		return model;
 	}
 
 }

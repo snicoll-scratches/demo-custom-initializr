@@ -38,7 +38,7 @@ public class SampleProjectGenerationConfiguration {
 	@Bean
 	public SingleTypeProjectContributor singleTypeProjectContributor(MustacheTemplateRenderer templateRenderer,
 			ProjectDescription description) {
-		return new SingleTypeProjectContributor(templateRenderer, description, "Test.java");
+		return new SingleTypeProjectContributor(templateRenderer, description, "Test");
 	}
 
 }
