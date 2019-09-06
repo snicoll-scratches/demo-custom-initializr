@@ -34,7 +34,7 @@ that's not really what we want.
 Let's showcase how conditions can add something to the `ProjectGenerationContext` when it
 makes sense. We can swap the build system and showcase the output.
 
-## Add out-of-the-box conditions
+## Add out-of-the-box contributions
 We can add `initializr-generator-spring` to bring all the defaults for a Spring Boot
 project. Those conventions require a few extra bits:
 
@@ -56,7 +56,7 @@ We can replace the beans in `SampleProjectGenerationConfiguration` to a unique s
 ```
 @Bean
 public BuildCustomizer<Build> sampleBuildCustomizer() {
-    return (build) -> build.addInternalVersionProperty("test.information", "Hello");
+    return (build) -> build.properties().version("test.information", "Hello");
 }
 ```
 
@@ -66,4 +66,4 @@ A new commit brings a new project that has:
 * `application.yml` with a very basic metadata
 * An empty Spring Boot app
 
-We can run this app and then generate a project against `localhost:8080`.
+We can run this app and then generate a project against `localhost:8080` from the IDE.
