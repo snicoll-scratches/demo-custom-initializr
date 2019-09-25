@@ -23,7 +23,7 @@ public class CustomInitializrInstanceApplication {
 		description.setBuildSystem(BuildSystem.forId(MavenBuildSystem.ID));
 		description.setLanguage(Language.forId(JavaLanguage.ID, "11"));
 		description.addDependency("spring-context", Dependency.withCoordinates("org.springframework", "spring-context")
-				.version(VersionReference.ofValue("5.1.8.RELEASE")).build());
+				.version(VersionReference.ofValue("5.1.8.RELEASE")));
 
 		// NEW
 		description.setPlatformVersion(Version.parse("2.1.6.RELEASE"));
