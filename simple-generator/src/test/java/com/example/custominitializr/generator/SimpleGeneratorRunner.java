@@ -11,14 +11,14 @@ import io.spring.initializr.generator.project.MutableProjectDescription;
 import io.spring.initializr.generator.version.Version;
 import io.spring.initializr.generator.version.VersionReference;
 
-public class CustomInitializrInstanceApplication {
+public class SimpleGeneratorRunner {
 
 	public static void main(String[] args) {
 		SimpleGenerator generator = new SimpleGenerator();
 
 		MutableProjectDescription description = new MutableProjectDescription();
 		description.setGroupId("com.example");
-		description.setArtifactId("demo");
+		description.setArtifactId("app");
 		description.setVersion("1.0.0.BUILD-SNAPSHOT");
 		description.setBuildSystem(BuildSystem.forId(MavenBuildSystem.ID));
 		description.setLanguage(Language.forId(JavaLanguage.ID, "11"));
@@ -26,7 +26,7 @@ public class CustomInitializrInstanceApplication {
 				.version(VersionReference.ofValue("5.1.8.RELEASE")));
 
 		// NEW
-		description.setPlatformVersion(Version.parse("2.1.6.RELEASE"));
+		description.setPlatformVersion(Version.parse("2.1.8.RELEASE"));
 		description.setApplicationName("DemoApp");
 
 		Path directory = generator.generateProject(description);

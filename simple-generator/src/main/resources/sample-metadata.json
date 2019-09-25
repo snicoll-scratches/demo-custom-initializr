@@ -20,16 +20,12 @@
           "versionProperty": "azure.version",
           "mappings": [
             {
-              "compatibilityRange": "[1.5.4.RELEASE,2.0.0.RELEASE)",
-              "version": "0.2.4"
-            },
-            {
               "compatibilityRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
               "version": "2.0.10"
             },
             {
               "compatibilityRange": "2.1.0.RELEASE",
-              "version": "2.1.6"
+              "version": "2.1.7"
             }
           ]
         },
@@ -38,10 +34,6 @@
           "artifactId": "spring-boot-admin-dependencies",
           "versionProperty": "spring-boot-admin.version",
           "mappings": [
-            {
-              "compatibilityRange": "[1.5.9.RELEASE,2.0.0.M1)",
-              "version": "1.5.7"
-            },
             {
               "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
               "version": "2.0.6"
@@ -58,18 +50,6 @@
           "versionProperty": "spring-cloud.version",
           "order": 50,
           "mappings": [
-            {
-              "compatibilityRange": "[1.5.0.RELEASE,1.5.x.RELEASE]",
-              "version": "Edgware.SR6"
-            },
-            {
-              "compatibilityRange": "[1.5.x.BUILD-SNAPSHOT,2.0.0.M1)",
-              "version": "Edgware.BUILD-SNAPSHOT",
-              "repositories": [
-                "spring-snapshots",
-                "spring-milestones"
-              ]
-            },
             {
               "compatibilityRange": "[2.0.0.M3, 2.0.0.M5)",
               "version": "Finchley.M2",
@@ -154,7 +134,7 @@
             },
             {
               "compatibilityRange": "[2.1.0.RELEASE,2.1.x.BUILD-SNAPSHOT)",
-              "version": "Greenwich.SR2"
+              "version": "Greenwich.SR3"
             },
             {
               "compatibilityRange": "[2.1.x.BUILD-SNAPSHOT,2.2.0.M4)",
@@ -165,8 +145,8 @@
               ]
             },
             {
-              "compatibilityRange": "[2.2.0.M4,2.2.0.M4]",
-              "version": "Hoxton.M1",
+              "compatibilityRange": "[2.2.0.M4,2.2.0.BUILD-SNAPSHOT)",
+              "version": "Hoxton.M2",
               "repositories": [
                 "spring-milestones"
               ]
@@ -190,16 +170,26 @@
           ],
           "mappings": [
             {
-              "compatibilityRange": "[1.5.0.RELEASE,1.5.x.BUILD-SNAPSHOT]",
-              "version": "1.6.6.RELEASE"
-            },
-            {
               "compatibilityRange": "[2.0.0.RELEASE,2.0.x.BUILD-SNAPSHOT]",
               "version": "2.0.3.RELEASE"
             },
             {
               "compatibilityRange": "2.1.0.RELEASE",
               "version": "2.1.4.RELEASE"
+            }
+          ]
+        },
+        "spring-data-r2dbc": {
+          "groupId": "org.springframework.boot.experimental",
+          "artifactId": "spring-boot-bom-r2dbc",
+          "mappings": [
+            {
+              "compatibilityRange": "2.0.0.M6",
+              "version": "0.1.0.BUILD-SNAPSHOT",
+              "repositories": [
+                "spring-snapshots",
+                "spring-milestones"
+              ]
             }
           ]
         },
@@ -234,16 +224,12 @@
           "versionProperty": "vaadin.version",
           "mappings": [
             {
-              "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-              "version": "8.8.5"
-            },
-            {
               "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
-              "version": "10.0.16"
+              "version": "10.0.17"
             },
             {
               "compatibilityRange": "2.1.0.M1",
-              "version": "13.0.11"
+              "version": "14.0.6"
             }
           ]
         }
@@ -266,7 +252,7 @@
         }
       },
       "gradle": {
-        "dependencyManagementPluginVersion": "1.0.7.RELEASE"
+        "dependencyManagementPluginVersion": "1.0.8.RELEASE"
       },
       "kotlin": {
         "defaultVersion": null,
@@ -303,7 +289,6 @@
             "artifactId": "spring-boot-devtools",
             "scope": "runtime",
             "description": "Provides fast application restarts, LiveReload, and configurations for enhanced development experience.",
-            "compatibilityRange": "1.3.0.RELEASE",
             "starter": false,
             "links": [
               {
@@ -329,7 +314,6 @@
             "artifactId": "spring-boot-configuration-processor",
             "scope": "annotationProcessor",
             "description": "Generate metadata for developers to offer contextual help and “code completion” when working with custom configuration keys (ex.application.properties/.yml files).",
-            "compatibilityRange": "1.2.0.RELEASE",
             "starter": false,
             "links": [
               {
@@ -345,7 +329,7 @@
         "name": "Web",
         "content": [
           {
-            "name": "Spring Web Starter",
+            "name": "Spring Web",
             "id": "web",
             "facets": [
               "web",
@@ -384,13 +368,13 @@
             "name": "Spring Reactive Web",
             "id": "webflux",
             "facets": [
-              "json"
+              "json",
+              "reactive"
             ],
             "groupId": "org.springframework.boot",
             "artifactId": "spring-boot-starter-webflux",
             "scope": "compile",
             "description": "Build reactive web applications with Spring WebFlux and Netty.",
-            "compatibilityRange": "2.0.0.M1",
             "weight": 90,
             "starter": true
           },
@@ -434,15 +418,6 @@
             "id": "session",
             "groupId": "org.springframework.session",
             "artifactId": "spring-session-core",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M2]",
-                "groupId": null,
-                "artifactId": "spring-session",
-                "version": null,
-                "starter": null
-              }
-            ],
             "scope": "compile",
             "description": "Provides an API and implementations for managing user session information.",
             "starter": false
@@ -521,15 +496,6 @@
             ]
           },
           {
-            "name": "Spring REST Docs",
-            "id": "restdocs",
-            "groupId": "org.springframework.restdocs",
-            "artifactId": "spring-restdocs-mockmvc",
-            "scope": "test",
-            "description": "Document RESTful services by combining hand-written with Asciidoctor and auto-generated snippets produced with Spring MVC Test.",
-            "starter": false
-          },
-          {
             "name": "Vaadin",
             "id": "vaadin",
             "facets": [
@@ -552,44 +518,6 @@
                 "href": "https://vaadin.com/spring"
               }
             ]
-          },
-          {
-            "name": "Apache CXF",
-            "id": "cxf-jaxrs",
-            "groupId": "org.apache.cxf",
-            "artifactId": "cxf-spring-boot-starter-jaxrs",
-            "version": "3.2.5",
-            "scope": "compile",
-            "description": "RESTful Web Services with JAX-RS. Making it trivial to declare endpoints which are backed by Spring and inject clients into your application.",
-            "compatibilityRange": "[1.5.0.RELEASE,2.1.0.M1)",
-            "starter": true,
-            "links": [
-              {
-                "rel": "reference",
-                "href": "https://cxf.apache.org/docs/springboot.html#SpringBoot-SpringBootCXFJAX-RSStarter"
-              }
-            ]
-          },
-          {
-            "name": "Ratpack",
-            "id": "ratpack",
-            "groupId": "io.ratpack",
-            "artifactId": "ratpack-spring-boot",
-            "version": "1.1.1",
-            "scope": "compile",
-            "description": "Ratpack is a set of Java libraries that facilitate fast, efficient, evolvable and well tested HTTP applications. Built on Netty the event-driven networking engine.",
-            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-            "starter": false
-          },
-          {
-            "name": "Spring Mobile",
-            "id": "mobile",
-            "groupId": "org.springframework.boot",
-            "artifactId": "spring-boot-starter-mobile",
-            "scope": "compile",
-            "description": "Framework that provides capabilities to detect the type of device making a request to your Spring web site and serve alternative views based on that device.",
-            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-            "starter": true
           }
         ]
       },
@@ -722,7 +650,6 @@
             "artifactId": "spring-boot-starter-oauth2-client",
             "scope": "compile",
             "description": "Spring Boot integration for Spring Security's OAuth2/OpenID Connect client features.",
-            "compatibilityRange": "2.0.0.M5",
             "starter": true,
             "links": [
               {
@@ -756,7 +683,6 @@
             "artifactId": "spring-boot-starter-data-ldap",
             "scope": "compile",
             "description": "Makes it easier to build Spring based applications that use the Lightweight Directory Access Protocol.",
-            "compatibilityRange": "1.5.0.RELEASE",
             "starter": true,
             "links": [
               {
@@ -774,7 +700,7 @@
             "version": "1.2.1",
             "scope": "compile",
             "description": "Okta specific configuration for Spring Security/Spring Boot OAuth2 features. Enable your Spring Boot application to work with Okta via OAuth 2.0/OIDC.",
-            "compatibilityRange": "2.1.2.RELEASE",
+            "compatibilityRange": "[2.1.2.RELEASE,2.2.0.M1)",
             "starter": true,
             "links": [
               {
@@ -832,12 +758,63 @@
             ]
           },
           {
+            "name": "Spring Data JDBC",
+            "id": "data-jdbc",
+            "groupId": "org.springframework.boot",
+            "artifactId": "spring-boot-starter-data-jdbc",
+            "scope": "compile",
+            "description": "Persist data in SQL stores with plain JDBC using Spring Data.",
+            "compatibilityRange": "2.1.0.RELEASE",
+            "starter": true,
+            "links": [
+              {
+                "rel": "guide",
+                "href": "https://github.com/spring-projects/spring-data-examples/tree/master/jdbc/basics",
+                "description": "Using Spring Data JDBC"
+              },
+              {
+                "rel": "reference",
+                "href": "https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/"
+              }
+            ]
+          },
+          {
+            "name": "Spring Data R2DBC [Experimental]",
+            "id": "data-r2dbc",
+            "facets": [
+              "reactive"
+            ],
+            "groupId": "org.springframework.boot.experimental",
+            "artifactId": "spring-boot-starter-data-r2dbc",
+            "scope": "compile",
+            "description": "Provides Reactive Relational Database Connectivity to persist data in SQL stores using Spring Data in reactive applications.",
+            "compatibilityRange": "2.2.0.M6",
+            "bom": "spring-data-r2dbc",
+            "starter": true,
+            "links": [
+              {
+                "rel": "guide",
+                "href": "https://github.com/spring-projects-experimental/spring-boot-r2dbc/tree/master/spring-boot-example-h2",
+                "description": "R2DBC example"
+              },
+              {
+                "rel": "reference",
+                "href": "https://docs.spring.io/spring-data/r2dbc/docs/1.0.x/reference/html/#reference"
+              },
+              {
+                "rel": "home",
+                "href": "https://r2dbc.io",
+                "description": "R2DBC Homepage"
+              }
+            ]
+          },
+          {
             "name": "MySQL Driver",
             "id": "mysql",
             "groupId": "mysql",
             "artifactId": "mysql-connector-java",
             "scope": "runtime",
-            "description": "MySQL JDBC driver.",
+            "description": "MySQL JDBC and R2DBC driver.",
             "starter": false,
             "links": [
               {
@@ -853,7 +830,7 @@
             "groupId": "com.h2database",
             "artifactId": "h2",
             "scope": "runtime",
-            "description": "Provides a fast in-memory database that supports JDBC API, with a small (2mb) footprint. Supports embedded and server modes as well as a browser based console application.",
+            "description": "Provides a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. Supports embedded and server modes as well as a browser based console application.",
             "starter": false
           },
           {
@@ -889,13 +866,6 @@
             "artifactId": "mybatis-spring-boot-starter",
             "mappings": [
               {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": "1.3.4",
-                "starter": null
-              },
-              {
                 "compatibilityRange": "[2.0.0.RELEASE,2.1.0.RELEASE)",
                 "groupId": null,
                 "artifactId": null,
@@ -921,7 +891,7 @@
               },
               {
                 "rel": "reference",
-                "href": "http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/"
+                "href": "https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/"
               }
             ]
           },
@@ -931,7 +901,7 @@
             "groupId": "org.postgresql",
             "artifactId": "postgresql",
             "scope": "runtime",
-            "description": "An open source JDBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java code.",
+            "description": "A JDBC and R2DBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java code.",
             "starter": false
           },
           {
@@ -940,7 +910,7 @@
             "groupId": "com.microsoft.sqlserver",
             "artifactId": "mssql-jdbc",
             "scope": "runtime",
-            "description": "A Type 4 JDBC driver that provides access to Microsoft SQL Server and Azure SQL Database from any Java application.",
+            "description": "A JDBC and R2DBC driver that provides access to Microsoft SQL Server and Azure SQL Database from any Java application.",
             "starter": false
           },
           {
@@ -1041,11 +1011,13 @@
           {
             "name": "Spring Data Reactive Redis",
             "id": "data-redis-reactive",
+            "facets": [
+              "reactive"
+            ],
             "groupId": "org.springframework.boot",
             "artifactId": "spring-boot-starter-data-redis-reactive",
             "scope": "compile",
             "description": "Access Redis key-value data stores in a reactive fashion with Spring Data Redis.",
-            "compatibilityRange": "2.0.0.M7",
             "starter": true,
             "links": [
               {
@@ -1085,11 +1057,13 @@
           {
             "name": "Spring Data Reactive MongoDB",
             "id": "data-mongodb-reactive",
+            "facets": [
+              "reactive"
+            ],
             "groupId": "org.springframework.boot",
             "artifactId": "spring-boot-starter-data-mongodb-reactive",
             "scope": "compile",
-            "description": "Provides asynchronous stream processing with non-blocking back pressure for MongoDB. Implements the Reactive Streams API.",
-            "compatibilityRange": "2.0.0.M1",
+            "description": "Provides asynchronous stream processing with non-blocking back pressure for MongoDB.",
             "weight": 50,
             "starter": true,
             "links": [
@@ -1099,15 +1073,6 @@
                 "templated": true
               }
             ]
-          },
-          {
-            "name": "Embedded MongoDB database",
-            "id": "flapdoodle-mongo",
-            "groupId": "de.flapdoodle.embed",
-            "artifactId": "de.flapdoodle.embed.mongo",
-            "scope": "test",
-            "description": "Provides a platform neutral way for running MongoDB in unit tests.",
-            "starter": false
           },
           {
             "name": "Spring Data Elasticsearch (Access+Driver)",
@@ -1161,17 +1126,42 @@
           {
             "name": "Spring Data Reactive for Apache Cassandra",
             "id": "data-cassandra-reactive",
+            "facets": [
+              "reactive"
+            ],
             "groupId": "org.springframework.boot",
             "artifactId": "spring-boot-starter-data-cassandra-reactive",
             "scope": "compile",
             "description": "Access Cassandra NoSQL Database in a reactive fashion",
-            "compatibilityRange": "2.0.0.M1",
             "starter": true,
             "links": [
               {
                 "rel": "reference",
                 "href": "https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-cassandra",
                 "templated": true
+              }
+            ]
+          },
+          {
+            "name": "Spring for Apache Geode",
+            "id": "geode",
+            "groupId": "org.springframework.geode",
+            "artifactId": "spring-geode-starter",
+            "version": "1.2.0.M3",
+            "scope": "compile",
+            "description": "Apache Geode is a data management platform that helps users build real-time, highly concurrent, highly performant and reliable Spring Boot applications at scale.",
+            "compatibilityRange": "2.2.0.M5",
+            "repository": "spring-milestones",
+            "starter": true,
+            "links": [
+              {
+                "rel": "reference",
+                "href": "https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/"
+              },
+              {
+                "rel": "guide",
+                "href": "https://github.com/spring-projects/spring-boot-data-geode/tree/master/spring-geode-samples",
+                "description": "Using Spring for Apache Geode"
               }
             ]
           },
@@ -1194,11 +1184,13 @@
           {
             "name": "Spring Data Reactive Couchbase",
             "id": "data-couchbase-reactive",
+            "facets": [
+              "reactive"
+            ],
             "groupId": "org.springframework.boot",
             "artifactId": "spring-boot-starter-data-couchbase-reactive",
             "scope": "compile",
             "description": "Access Couchbase NoSQL database in a reactive fashion with Spring Data Couchbase.",
-            "compatibilityRange": "2.0.0.M7",
             "starter": true,
             "links": [
               {
@@ -1225,28 +1217,6 @@
               {
                 "rel": "reference",
                 "href": "https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-neo4j",
-                "templated": true
-              }
-            ]
-          },
-          {
-            "name": "Spring Data Gemfire",
-            "id": "data-gemfire",
-            "groupId": "org.springframework.boot",
-            "artifactId": "spring-boot-starter-data-gemfire",
-            "scope": "compile",
-            "description": "Access GemFire distributed data store with Spring Data Gemfire.",
-            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-            "starter": true,
-            "links": [
-              {
-                "rel": "guide",
-                "href": "https://spring.io/guides/gs/accessing-data-gemfire/",
-                "description": "Accessing Data with GemFire"
-              },
-              {
-                "rel": "reference",
-                "href": "https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-gemfire",
                 "templated": true
               }
             ]
@@ -1310,7 +1280,6 @@
             "artifactId": "spring-kafka",
             "scope": "compile",
             "description": "Publish, subscribe, store, and process streams of records.",
-            "compatibilityRange": "1.5.0.RELEASE",
             "weight": 100,
             "starter": false,
             "keywords": [
@@ -1331,7 +1300,6 @@
             "artifactId": "kafka-streams",
             "scope": "compile",
             "description": "Building stream processing applications with Apache Kafka Streams.",
-            "compatibilityRange": "2.0.0.RELEASE",
             "weight": 90,
             "starter": false,
             "links": [
@@ -1432,13 +1400,6 @@
             "artifactId": "camel-spring-boot-starter",
             "mappings": [
               {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-                "groupId": null,
-                "artifactId": null,
-                "version": "2.21.5",
-                "starter": null
-              },
-              {
                 "compatibilityRange": "[2.0.0.M1,2.1.0.M1)",
                 "groupId": null,
                 "artifactId": null,
@@ -1455,7 +1416,7 @@
             ],
             "scope": "compile",
             "description": "Apache Camel lets you create the Enterprise Integration Patterns to implement routing and mediation rules a Java based Domain Specific Language via Spring.",
-            "compatibilityRange": "1.5.0.RELEASE",
+            "compatibilityRange": "[2.0.0.M1,2.2.0.M1)",
             "starter": true,
             "links": [
               {
@@ -1515,7 +1476,6 @@
             "artifactId": "spring-boot-starter-quartz",
             "scope": "compile",
             "description": "Schedule jobs using Quartz.",
-            "compatibilityRange": "2.0.0.M2",
             "starter": true
           },
           {
@@ -1566,23 +1526,13 @@
             ]
           },
           {
-            "name": "Spring Boot Actuator Docs",
-            "id": "actuator-docs",
-            "groupId": "org.springframework.boot",
-            "artifactId": "spring-boot-actuator-docs",
-            "scope": "compile",
-            "description": "API documentation for the Actuator endpoints.",
-            "compatibilityRange": "[1.5.0.RELEASE,2.0.0.M1)",
-            "starter": false
-          },
-          {
             "name": "Spring Boot Admin (Client)",
             "id": "codecentric-spring-boot-admin-client",
             "groupId": "de.codecentric",
             "artifactId": "spring-boot-admin-starter-client",
             "scope": "compile",
             "description": "Required for your application to register with a Spring Boot Admin Server instance.",
-            "compatibilityRange": "[1.5.9.RELEASE,2.2.0.M1)",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "codecentric-spring-boot-admin",
             "starter": true,
             "links": [
@@ -1599,7 +1549,7 @@
             "artifactId": "spring-boot-admin-starter-server",
             "scope": "compile",
             "description": "A community project to manage and monitor your Spring Boot applications. Provides a UI on top of the Spring Boot Actuator endpoints.",
-            "compatibilityRange": "[1.5.9.RELEASE,2.2.0.M1)",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "codecentric-spring-boot-admin",
             "starter": true,
             "links": [
@@ -1608,6 +1558,72 @@
                 "href": "https://codecentric.github.io/spring-boot-admin/current/#getting-started"
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Testing",
+        "content": [
+          {
+            "name": "Spring REST Docs",
+            "id": "restdocs",
+            "groupId": "org.springframework.restdocs",
+            "artifactId": "spring-restdocs-mockmvc",
+            "scope": "test",
+            "description": "Document RESTful services by combining hand-written with Asciidoctor and auto-generated snippets produced with Spring MVC Test.",
+            "starter": false
+          },
+          {
+            "name": "Contract Verifier",
+            "id": "cloud-contract-verifier",
+            "groupId": "org.springframework.cloud",
+            "artifactId": "spring-cloud-starter-contract-verifier",
+            "scope": "test",
+            "description": "Moves TDD to the level of software architecture by enabling Consumer Driven Contract (CDC) development.",
+            "bom": "spring-cloud",
+            "starter": true,
+            "links": [
+              {
+                "rel": "guide",
+                "href": "https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_verifier_setup",
+                "description": "Spring Cloud Contract Verifier Setup"
+              }
+            ]
+          },
+          {
+            "name": "Contract Stub Runner",
+            "id": "cloud-contract-stub-runner",
+            "groupId": "org.springframework.cloud",
+            "artifactId": "spring-cloud-starter-contract-stub-runner",
+            "scope": "test",
+            "description": "Stub Runner for HTTP/Messaging based communication. Allows creating WireMock stubs from RestDocs tests.",
+            "bom": "spring-cloud",
+            "starter": true
+          },
+          {
+            "name": "Embedded LDAP Server",
+            "id": "unboundid-ldap",
+            "groupId": "com.unboundid",
+            "artifactId": "unboundid-ldapsdk",
+            "scope": "test",
+            "description": "Provides a platform neutral way for running a LDAP server in unit tests.",
+            "starter": false,
+            "links": [
+              {
+                "rel": "reference",
+                "href": "https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/html/boot-features-nosql.html#boot-features-ldap-embedded",
+                "templated": true
+              }
+            ]
+          },
+          {
+            "name": "Embedded MongoDB Database",
+            "id": "flapdoodle-mongo",
+            "groupId": "de.flapdoodle.embed",
+            "artifactId": "de.flapdoodle.embed.mongo",
+            "scope": "test",
+            "description": "Provides a platform neutral way for running MongoDB in unit tests.",
+            "starter": false
           }
         ]
       },
@@ -1637,7 +1653,6 @@
             "artifactId": "spring-cloud-function-context",
             "scope": "compile",
             "description": "Promotes the implementation of business logic via functions and supports a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).",
-            "compatibilityRange": "2.0.2.RELEASE",
             "bom": "spring-cloud",
             "starter": false,
             "links": [
@@ -1657,15 +1672,6 @@
             "id": "cloud-task",
             "groupId": "org.springframework.cloud",
             "artifactId": "spring-cloud-starter-task",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": null,
-                "starter": false
-              }
-            ],
             "scope": "compile",
             "description": "Allows a user to develop and run short lived microservices using Spring Cloud. Run them locally, in the cloud, and on Spring Cloud Data Flow.",
             "bom": "spring-cloud",
@@ -1727,13 +1733,12 @@
                 "compatibilityRange": "2.1.0.M1",
                 "groupId": null,
                 "artifactId": null,
-                "version": "3.0.3.RELEASE",
+                "version": "3.0.4.RELEASE",
                 "starter": null
               }
             ],
             "scope": "compile",
             "description": "Framework for building Spring Boot apps that implement the Open Service Broker API, which can deliver services to applications running within cloud native platforms such as Cloud Foundry, Kubernetes and OpenShift.",
-            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -1747,42 +1752,6 @@
                 "description": "Using Spring Cloud Open Service Broker"
               }
             ]
-          },
-          {
-            "name": "Contract Verifier",
-            "id": "cloud-contract-verifier",
-            "groupId": "org.springframework.cloud",
-            "artifactId": "spring-cloud-starter-contract-verifier",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": null,
-                "starter": false
-              }
-            ],
-            "scope": "test",
-            "description": "Moves TDD to the level of software architecture by enabling Consumer Driven Contract (CDC) development.",
-            "bom": "spring-cloud",
-            "starter": true,
-            "links": [
-              {
-                "rel": "guide",
-                "href": "https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_verifier_setup",
-                "description": "Spring Cloud Contract Verifier Setup"
-              }
-            ]
-          },
-          {
-            "name": "Contract Stub Runner",
-            "id": "cloud-contract-stub-runner",
-            "groupId": "org.springframework.cloud",
-            "artifactId": "spring-cloud-starter-contract-stub-runner",
-            "scope": "test",
-            "description": "Stub Runner for HTTP/Messaging based communication. Allows creating WireMock stubs from RestDocs tests.",
-            "bom": "spring-cloud",
-            "starter": true
           }
         ]
       },
@@ -1824,7 +1793,6 @@
             "artifactId": "spring-cloud-starter-vault-config",
             "scope": "compile",
             "description": "Provides client-side support for externalized configuration in a distributed system. Using HashiCorp's Vault you have a central place to manage external secret properties for applications across all environments.",
-            "compatibilityRange": "1.5.3.RELEASE",
             "bom": "spring-cloud",
             "starter": true
           },
@@ -1843,15 +1811,6 @@
             "id": "cloud-starter-consul-config",
             "groupId": "org.springframework.cloud",
             "artifactId": "spring-cloud-starter-consul-config",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": null,
-                "starter": true
-              }
-            ],
             "scope": "compile",
             "description": "Enable and configure the common patterns inside your application and build large distributed systems with Hashicorp’s Consul. The patterns provided include Service Discovery, Distributed Configuration and Control Bus.",
             "bom": "spring-cloud",
@@ -1905,15 +1864,6 @@
             "id": "cloud-cloudfoundry-discovery",
             "groupId": "org.springframework.cloud",
             "artifactId": "spring-cloud-cloudfoundry-discovery",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": null,
-                "starter": false
-              }
-            ],
             "scope": "compile",
             "description": "Service discovery with Cloud Foundry",
             "bom": "spring-cloud",
@@ -1958,7 +1908,6 @@
             "artifactId": "spring-cloud-starter-gateway",
             "scope": "compile",
             "description": "Provides a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as security, monitoring/metrics, and resiliency.",
-            "compatibilityRange": "2.0.0.M5",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2045,7 +1994,6 @@
             "artifactId": "spring-cloud-starter-netflix-turbine-stream",
             "scope": "compile",
             "description": "Circuit breaker metric aggregation using spring-cloud-netflix with Turbine and Spring Cloud Stream (requires a binder, e.g. Apache Kafka or RabbitMQ)",
-            "compatibilityRange": "1.3.0.RELEASE",
             "bom": "spring-cloud",
             "weight": -1,
             "starter": true
@@ -2108,7 +2056,7 @@
             "artifactId": "spring-cloud-stream-reactive",
             "scope": "compile",
             "description": "Reactive messaging microservices with Spring Cloud Stream (requires a binder, e.g. Apache Kafka or RabbitMQ).",
-            "compatibilityRange": "2.0.0.RC2",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "spring-cloud",
             "weight": 90,
             "starter": true
@@ -2123,15 +2071,6 @@
             "id": "scs-config-client",
             "groupId": "io.pivotal.spring.cloud",
             "artifactId": "spring-cloud-services-starter-config-client",
-            "mappings": [
-              {
-                "compatibilityRange": "[1.5.0.RELEASE,2.0.0.RELEASE)",
-                "groupId": null,
-                "artifactId": null,
-                "version": null,
-                "starter": true
-              }
-            ],
             "scope": "compile",
             "description": "Config client on Pivotal Cloud Foundry",
             "bom": "spring-cloud-services",
@@ -2222,7 +2161,7 @@
             "artifactId": "azure-spring-boot-starter",
             "scope": "compile",
             "description": "Auto-configuration for Azure Services (Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, and more).",
-            "compatibilityRange": "1.5.4.RELEASE",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2239,7 +2178,7 @@
             "artifactId": "azure-active-directory-spring-boot-starter",
             "scope": "compile",
             "description": "Spring Security integration with Azure Active Directory for authentication.",
-            "compatibilityRange": "1.5.4.RELEASE",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2261,7 +2200,7 @@
             "artifactId": "azure-keyvault-secrets-spring-boot-starter",
             "scope": "compile",
             "description": "Manage application secrets and keys.",
-            "compatibilityRange": "1.5.4.RELEASE",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2283,7 +2222,7 @@
             "artifactId": "azure-storage-spring-boot-starter",
             "scope": "compile",
             "description": "Azure Storage service integration.",
-            "compatibilityRange": "1.5.4.RELEASE",
+            "compatibilityRange": "[2.0.0.RELEASE,2.2.0.M1)",
             "bom": "azure",
             "starter": true,
             "links": [
@@ -2310,7 +2249,6 @@
             "artifactId": "spring-cloud-gcp-starter",
             "scope": "compile",
             "description": "Contains auto-configuration support for every Spring Cloud GCP integration. Most of the auto-configuration code is only enabled if other dependencies are added to the classpath.",
-            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2332,7 +2270,6 @@
             "artifactId": "spring-cloud-gcp-starter-pubsub",
             "scope": "compile",
             "description": "Adds the GCP Support entry and all the required dependencies so that the Google Cloud Pub/Sub integration work out of the box.",
-            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2354,7 +2291,6 @@
             "artifactId": "spring-cloud-gcp-starter-storage",
             "scope": "compile",
             "description": "Adds the GCP Support entry and all the required dependencies so that the Google Cloud Storage integration work out of the box.",
-            "compatibilityRange": "2.0.0.RELEASE",
             "bom": "spring-cloud",
             "starter": true,
             "links": [
@@ -2432,8 +2368,8 @@
     "description": "spring boot version",
     "content": [
       {
-        "name": "2.2.0 M4",
-        "id": "2.2.0.M4",
+        "name": "2.2.0 M6",
+        "id": "2.2.0.M6",
         "default": false
       },
       {
@@ -2442,19 +2378,14 @@
         "default": false
       },
       {
-        "name": "2.1.7 (SNAPSHOT)",
-        "id": "2.1.7.BUILD-SNAPSHOT",
+        "name": "2.1.9 (SNAPSHOT)",
+        "id": "2.1.9.BUILD-SNAPSHOT",
         "default": false
       },
       {
-        "name": "2.1.6",
-        "id": "2.1.6.RELEASE",
+        "name": "2.1.8",
+        "id": "2.1.8.RELEASE",
         "default": true
-      },
-      {
-        "name": "1.5.21",
-        "id": "1.5.21.RELEASE",
-        "default": false
       }
     ]
   },
@@ -2482,11 +2413,6 @@
     "title": "Java Version",
     "description": "language level",
     "content": [
-      {
-        "name": "12",
-        "id": "12",
-        "default": false
-      },
       {
         "name": "11",
         "id": "11",
